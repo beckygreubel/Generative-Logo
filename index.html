@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <!-- lines 6–9, you don't need to touch this stuff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Logo Generator</title>
+
+    <!-- If you're using google fonts, add the font here -->
+    
+    <!-- Connect the css stylesheet. Make sure the filepath is correct -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+
+  <body>
+      <div class="container">
+          <div class="selectors" >
+            <div class="onetime">
+            <!-- Ticket type -->
+                <p>Select your ticket type:</p>
+                <select id="ticketType" onchange="myTicketType()">
+                    <option value="">---</option>
+                    <option value="type1">Patron</option>
+                    <option value="type2">Festival</option>
+                    <option value="type3">Cinephile</option>
+                    <option value="type4">Acme</option>
+                    <option value="press">Press</option>
+                    <option value="invitee">Invitee</option>
+                    <option value="volunteer">Showcorps</option>
+                </select>
+
+                <!-- # of mountain ranges - slider -->
+            <p> How many years have you been coming to TFF?</p>
+            <div class="slidecontainer">
+                <input type="range" min ="1" max="4" value="1" class="slider" id="numRanges" disabled="true">
+            </div>
+            <div id="range-value">1st</div>
+
+            </div>
+           
+             </div>
+             <div class="output">
+               <div id="backgroundColor">
+                <div id="logoContainer"> 
+                    
+                  <!-- This is what is being manipulated -->
+                </div>
+              </div>
+            </div>
+            <div id="perRangeParent">
+              <div id="perRange" class="perRange">
+                  <!-- Mountain range -  dropdown -->
+                  <p>Select a movie genre:</p>
+                  <select class="dropdown" id="mountainRanges0" onchange="myMountainRange(this.id)" disabled="true">
+                      <option value="">---</option>
+                      <option value="Palmyra" selected="selected">Drama</option>
+                      <!-- <option value="MtSneffels">Comedy</option> -->
+                      <option value="LaJunta">Documentary</option>
+                      <option value="Wilson">Action</option>
+                      <option value="BridalVeil">RomCom</option>
+                      <option value="Uncompahgre">SciFi</option>
+                  </select>
+              </div>
+        </div>
+
+          </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
